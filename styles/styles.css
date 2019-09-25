@@ -1,0 +1,43 @@
+/***  Minimum viewport 320px mobile portrait  ***/
+
+* {
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+.mainHeader {
+  text-align: center;
+  width: 250px;
+  height: 100px;  
+}
+
+.mainWindow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 275px;
+  border: 5px;
+}
+
+
+/***  Minimum viewport 480px mobile landscape  ***/
+@media screen and (min-width: 480px) {
+  .mainHeader {
+    width: 400px;
+  }
+
+  .mainWindow {
+    width: 400px;
+  }
+}
+
+/***  Minimum viewport 768px iPad portrait  ***/
+@media screen and (min-width: 768px) {
+  .mainHeader {
+    width: 500px;
+  }
+
+  .mainWindow {
+    width: 650px;
+  }
+}
