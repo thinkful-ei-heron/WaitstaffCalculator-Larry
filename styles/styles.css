@@ -38,8 +38,18 @@ body {
   border-width: 2px;
 }
 
-h2, fieldset {
+h2, p, fieldset, input, button {
   font-size: 18px;
+}
+
+.mealForm input {
+  display: inline-block;
+  width: 150px;
+}
+
+.mealForm button {
+  display: inline-block;
+  width: 150px;
 }
 
 .leftPanel {
