@@ -16,15 +16,27 @@
     </header>
 
     <main role="main" class="mainWindow" aria-live="assertive">
-        <div class = "leftPanel">
-          
-        </div>
+      <div class = "leftPanel">
+        <form class="mealForm" action="/action_page.html" method="post">
+          <fieldset name="fieldName">
+            <legend>Enter the Meal Details</legend>
+            <label for="price">Base Meal Price: $</label>
+            <input type="text" name="price" placeholder="0.00"><br>
+            <label for="taxRate">Tax Rate:</label>
+            <input type="text" name="taxRate" placeholder="0.0">%<br>
+            <label for="tipRate">Tip Percentage:</label>
+            <input type="text" name="tipRate" placeholder="0.0">%<br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+          </fieldset>
+        </form>
+      </div>
         <div class = "rightPanel">
           <div class = "rightUpper">
-          
-          </div>        
+            <h2>Customer Charges</h2>
+          </div>
           <div class = "rightLower">
-          
+            <h2>My Earnings</h2>
           </div>        
         </div>        
     </main>

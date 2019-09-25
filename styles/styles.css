@@ -38,6 +38,10 @@ body {
   border-width: 2px;
 }
 
+h2, fieldset {
+  font-size: 18px;
+}
+
 .leftPanel {
   width: 150px;
   border-color: black;
