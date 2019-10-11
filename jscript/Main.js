@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import Meal from './Meal.js';
 import Charges from './Charges.js';
+import Earnings from './Earnings.js';
 
 function render() {
   const htmlString = 
@@ -28,9 +29,9 @@ function render() {
       </div>
       <div class="rightLower">
         <h2>My Earnings</h2>
-        <p>Tip Total: $</p>
-        <p>Meal Count: $</p>
-        <p>Average Tip Per Meal: $</p>
+        <p>Tip Total: $${Earnings.store.tipTotal}</p>
+        <p>Meal Count: $${Earnings.store.mealCount}</p>
+        <p>Average Tip Per Meal: $${Earnings.store.tipPerMeal}</p>
         <button class="buttonAllReset">Reset</button>            
       </div>        
     </div>`;
@@ -49,13 +50,14 @@ function handleFormSubmit() {
     Meal.setTipRate(parseFloat(tipRate) / 100);
     
     Meal.calculateDetails();
+    Earnings.calculateDetails();    
 
     render();
   });
 }
 
 function handleReset() {
-  $('.js-mainWindow').on('submit', '.buttonAllReset', function() {
+  $('.js-mainWindow').on('click', '.buttonAllReset', function() {
     initialize();
   });
 }
@@ -66,7 +68,8 @@ function initialize() {
   Meal.setTipRate(0);
   Charges.setSubTotal(0);
   Charges.setTip(0);  
-  Charges.setTotal(0);  
+  Charges.setTotal(0);
+  Earnings.reset();  
 
   render();
 }
